@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="emp1" class="service.Employee">
+        <!--the constructor there is with parameters so we need to give values to create its bean-->
+        <constructor-arg value="01"/>
+        <constructor-arg value="Isha"/>
+        <constructor-arg value="45555.5"/>
+        <constructor-arg value="Jaipur"/>
+    </bean>
+
+</beans>
