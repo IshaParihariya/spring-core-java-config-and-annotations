@@ -5,12 +5,32 @@
            http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!--object 1-->
     <bean id="emp1" class="service.Employee">
         <!--the constructor there is with parameters so we need to give values to create its bean-->
+        <!--same order as the constructor of params -->
         <constructor-arg value="01"/>
         <constructor-arg value="Isha"/>
         <constructor-arg value="45555.5"/>
         <constructor-arg value="Jaipur"/>
+    </bean>
+
+    <!--object 2-->
+    <bean id="emp2" class="service.Employee">
+        <!--diff order as the constructor of the params so name ="" used to specify-->
+        <constructor-arg name="city" value="Surat"/>
+        <constructor-arg name="empId" value="02"/>
+        <constructor-arg name="name" value="Mohit"/>
+        <constructor-arg name="salary" value="70980.2"/>
+    </bean>
+
+    <!--object 2-->
+    <bean id="emp3" class="service.Employee">
+        <!--diff order as the constructor of the params so name ="" used to specify-->
+        <constructor-arg name="city" value="Bengaluru"/>
+        <constructor-arg name="empId" value="03"/>
+        <constructor-arg name="name" value="Kunal"/>
+        <constructor-arg name="salary" value="98067.2"/>
     </bean>
 
 </beans>
