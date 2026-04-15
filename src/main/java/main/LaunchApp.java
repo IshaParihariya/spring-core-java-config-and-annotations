@@ -40,5 +40,15 @@ public class LaunchApp
 
         // printing employeeTask method
         System.out.println(emp3.employeeTask());
+
+
+        // boss
+
+        // Get bean
+        Employee boss1 = (Employee) context.getBean("boss1");
+
+        // printing toString method
+        System.out.println(boss1.toString());
+
     }
 }

@@ -5,6 +5,7 @@
            http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!--employee-->
     <!--object 1-->
     <bean id="emp1" class="service.Employee">
         <!--the constructor there is with parameters so we need to give values to create its bean-->
@@ -24,7 +25,7 @@
         <constructor-arg name="salary" value="70980.2"/>
     </bean>
 
-    <!--object 2-->
+    <!--object 3-->
     <bean id="emp3" class="service.Employee">
         <!--diff order as the constructor of the params so name ="" used to specify-->
         <constructor-arg name="city" value="Bengaluru"/>
@@ -32,5 +33,14 @@
         <constructor-arg name="name" value="Kunal"/>
         <constructor-arg name="salary" value="98067.2"/>
     </bean>
+
+    <!--boss-->
+    <bean id="boss1" class="service.Boss">
+        <!--diff order as the constructor of the params so name ="" used to specify-->
+        <constructor-arg name="city" value="Surat"/>
+        <constructor-arg name="empId" value="01"/>
+        <constructor-arg name="name" value="Harsh"/>
+    </bean>
+
 
 </beans>
