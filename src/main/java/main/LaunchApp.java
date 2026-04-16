@@ -2,6 +2,7 @@ package main;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import service.Boss;
 import service.Employee;
 
 public class LaunchApp
@@ -45,7 +46,7 @@ public class LaunchApp
         // boss
 
         // Get bean
-        Employee boss1 = (Employee) context.getBean("boss1");
+        Boss boss1 = (Boss) context.getBean("boss1");
 
         // printing toString method
         System.out.println(boss1.toString());
