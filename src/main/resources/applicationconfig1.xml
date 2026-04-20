@@ -1,0 +1,41 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--meta data for c: and p: namespaces
+A namespace is simply an extra XML feature provided by Spring to reduce long code.
+
+👉 Instead of writing bulky tags like:
+
+<constructor-arg .../>
+<property .../>
+
+you can write them in a short form using:
+
+c: → constructor injection
+p: → setter injection-->
+
+
+    <!--department bean with c:-->
+    <bean id="depart1" class="service.Department"
+    c:d_id="101"
+    c:dname="CS"/>
+    <!--Student bean with c:-->
+    <bean id="student1" class="service.Student"
+    c:sid="1"
+    c:sname="Isha"
+    c:scity="Surat"
+    c:depart-ref="depart1"/> <!--Pass the Department bean object with id depart1-->
+
+    <!--Student bean with p: -->
+    <bean id="student2" class="service.Student"
+          p:sid="2"
+          p:sname="Mohit"
+          p:scity="Delhi"
+          p:depart-ref="depart1"/>
+
+</beans>
