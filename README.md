@@ -17,6 +17,9 @@ This project demonstrates core Spring Framework concepts using both XML-based co
 ---
 
 ## 📁 Project Structure
+
+---
+
 src/
 ├── main/
 │ ├── java/
