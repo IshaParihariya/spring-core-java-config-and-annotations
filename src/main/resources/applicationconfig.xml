@@ -23,7 +23,11 @@
         <constructor-arg name="empId" value="02"/>
         <constructor-arg name="name" value="Mohit"/>
         <constructor-arg name="salary" value="70980.2"/>
+        <!--  <constructor-arg index="4" value="Surat"/>
+        we can also mention the index like the number of parameter
+        -->
     </bean>
+
 
     <!--object 3-->
     <bean id="emp3" class="service.Employee">
